@@ -1,0 +1,13 @@
+
+# Node / React
+node_modules/
+0/_cacache/
+dist/
+build/
+.env
+.vscode/
+*.log
+
+# Mac / Windows
+.DS_Store
+Thumbs.db
