@@ -4,21 +4,21 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { useRef } from "react";
 import motorImg from "../../../assets/ChatGPT_Image_21_فبراير_2026__08_22_07_م-removebg-preview.png";
 import fire from "../../../assets/fire.gif";
-import './Moto.css';
+import './MotorCurve.css';
 
 export default function MotorCurve() {
   const sectionRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["start end", "end start"],
+    offset:["start 80%", "end 20%"],
   });
 
-  const multiplier = 1.3; 
+  const multiplier = 0.9; 
 
   const distance = useSpring(
     useTransform(scrollYProgress, (v) => `${Math.min(v * multiplier, 1) * 100}%`),
-    { stiffness: 100, damping: 30 }
+    { stiffness: 90, damping: 30 }
   );
 
 
@@ -26,7 +26,7 @@ export default function MotorCurve() {
     <section
       ref={sectionRef}
       style={{
-        height: "200vh",
+        height: "100vh",
         position: "relative",
       }}
     >

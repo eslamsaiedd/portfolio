@@ -34,7 +34,7 @@
   display: block;
   font-size: 17px;
   font-weight: 500;
-  color: #57564f;
+  color: var(--background-color);
   font-family: Plusjakartasans, sans-serif;
 }
 
@@ -44,8 +44,8 @@
 
 .logoLetters {
   font-size: 33px;
-  letter-spacing: 2px;
   font-weight: bolder;
+  letter-spacing: -0.72px;
   font-family: "Pastline Sans", Arial, sans-serif;
 }
 

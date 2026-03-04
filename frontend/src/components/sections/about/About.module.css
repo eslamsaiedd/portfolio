@@ -1,0 +1,23 @@
+
+.wrapper {
+  display: flex;
+  position: relative;
+  min-height: 200vh;
+}
+
+/* النص */
+.textSide {
+  width: 70%;
+}
+
+/* جزء الموتسيكل */
+.animationSide {
+  width: 30%;
+  position: relative;
+}
+
+/* نخليه ثابت في نص الشاشة */
+.animationSide > section {
+  position: sticky;
+  top: 10%;
+}

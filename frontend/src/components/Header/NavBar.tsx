@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import styles from './NavBar.module.css'
-
 export function NavBar() {
 
     const [show, setShow] = useState(true);
@@ -30,7 +29,7 @@ export function NavBar() {
     return (
         <div className={`${styles.navbar} ${show ? styles.visible : styles.hidden}`}>
             <div className={styles.logoLetters}>
-                ESLAM SAIED
+                E.S.
             </div>
             <div>
                 <ul className={styles.fontOption}>

@@ -1,0 +1,48 @@
+.hookText {
+  width: 100%;
+  font-family:"Pastline Sans", Arial, sans-serif;
+  font-size: 56px;
+  font-weight: bolder;
+  letter-spacing: -3px;
+}
+
+.paddingGlobal {
+  width: 100%;
+  padding: 160px 80px 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+  
+.secondLineTextHook {
+  font-size: 112px;
+  color: var(--primary-color);
+}
+
+.inlineSpan {
+  display: inline-block;
+  color: gray;
+}
+
+.subTitle {
+  color: #a6a6a6;
+  font-size: 18px;
+  letter-spacing: normal;
+  font-weight: 500;
+}
+
+.heroText {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.wave {
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* width: 855px; */
+}
