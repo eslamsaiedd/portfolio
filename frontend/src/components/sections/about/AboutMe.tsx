@@ -1,21 +1,54 @@
 
+import { motion } from "framer-motion";
 import MotorCurve from "../../motorCurve/MotorCurve";
 import styles from "./About.module.css";
+
+const container = {
+  hidden: {},
+    show: { transition: { staggerChildren: 0.2 } },
+};
+
+const item = {
+    hidden: { opacity: 0, y: 30 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+} as const;
 
 export function AboutMe() { 
 
     return (
-        <section className={styles.wrapper}>
-            <div className={styles.textSide}>
-                <h1>about</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse deserunt repudiandae, optio laborum explicabo, error nisi illo fuga alias dignissimos placeat! Enim nemo quos, nam eos quibusdam dolorum rem molestiae quia tempora ab? Eos, obcaecati quas blanditiis dolores quis, et odio repellendus unde quo est tenetur illum, rerum ex. Distinctio ea fugiat voluptatibus! Autem perspiciatis excepturi fuga, veniam omnis optio minima nemo expedita sequi dolorum dolorem laboriosam, unde corrupti eaque provident enim consectetur blanditiis asperiores beatae esse sapiente porro voluptates et! Sint laborum officia consequatur, illo corporis repellat id aut eum fuga repudiandae, vel, numquam dicta ad adipisci autem velit omnis beatae quisquam explicabo molestias. Officiis quod temporibus eaque pariatur placeat vel fuga magni debitis autem nostrum eius reiciendis assumenda, vitae quas tempore, illum maxime perspiciatis. Nemo modi itaque iusto excepturi omnis debitis praesentium? Rem minus libero dignissimos voluptas, itaque harum, officiis in et sunt ad quis praesentium aut officia doloremque, repudiandae atque! Magnam eius vitae, sed voluptatibus, enim illum aliquam minus nam officiis, deleniti suscipit rerum possimus rem sapiente esse. Fuga quam, officiis debitis reiciendis at harum dignissimos sed expedita, nihil non inventore nostrum deleniti optio aliquam doloremque commodi ab! Voluptates minima cumque doloremque dicta est deleniti labore architecto!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse deserunt repudiandae, optio laborum explicabo, error nisi illo fuga alias dignissimos placeat! Enim nemo quos, nam eos quibusdam dolorum rem molestiae quia tempora ab? Eos, obcaecati quas blanditiis dolores quis, et odio repellendus unde quo est tenetur illum, rerum ex. Distinctio ea fugiat voluptatibus! Autem perspiciatis excepturi fuga, veniam omnis optio minima nemo expedita sequi dolorum dolorem laboriosam, unde corrupti eaque provident enim consectetur blanditiis asperiores beatae esse sapiente porro voluptates et! Sint laborum officia consequatur, illo corporis repellat id aut eum fuga repudiandae, vel, numquam dicta ad adipisci autem velit omnis beatae quisquam explicabo molestias. Officiis quod temporibus eaque pariatur placeat vel fuga magni debitis autem nostrum eius reiciendis assumenda, vitae quas tempore, illum maxime perspiciatis. Nemo modi itaque iusto excepturi omnis debitis praesentium? Rem minus libero dignissimos voluptas, itaque harum, officiis in et sunt ad quis praesentium aut officia doloremque, repudiandae atque! Magnam eius vitae, sed voluptatibus, enim illum aliquam minus nam officiis, deleniti suscipit rerum possimus rem sapiente esse. Fuga quam, officiis debitis reiciendis at harum dignissimos sed expedita, nihil non inventore nostrum deleniti optio aliquam doloremque commodi ab! Voluptates minima cumque doloremque dicta est deleniti labore architecto!</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien eget nunc efficitur commodo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-            </div>
+        <section id="About" className={`${styles.wrapper} sectionPadding`} >
+            <motion.div
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.1 }}
+            style={{display:"flex", width:"100%"}} >
 
-            <div className={styles.animationSide}>
-                <MotorCurve/> 
-            </div>
+                <motion.div 
+                variants={item}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.3 }}
+                className={styles.textSide}>
+                    <h2 className={styles.sectionTitle}>Who is Eslam?</h2>
+                    <p>My name is Eslam Saied born in 2006</p>
+                    <p>I'm a passionate Front-End Developer who started learning programming as a hobby and quickly fell in love with building things on the web.
+                        {/* I'm a passionate Front-End Developer who started learning programming as a hobby and quickly fell in love with building things on the web. */}
+                    </p>
+                    <p>Currently studying and continuously improving my skills in modern web technologies.</p>
+                    <p>I enjoy turning ideas into interactive and visually appealing web experiences.</p>
+                    <p>Always curious to learn new tools, experiment with animations, and create better user experiences.</p>
+                </motion.div>
+
+                <motion.div
+                variants={item}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.3 }} 
+                className={styles.animationSide}>
+                    <MotorCurve/> 
+                </motion.div>
+            </motion.div>
         </section>
     )
 }

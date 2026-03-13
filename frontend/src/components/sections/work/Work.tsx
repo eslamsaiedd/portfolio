@@ -1,62 +1,22 @@
 
-// import styles from "./Work.module.css";
-// import '../../../App.css';
-// import image from '../../../../assets/blob-scene-haikei-removebg-preview.png';
-
-// export function Work() { 
-
-//     return (
-//         <div className={`${styles.background} sectionPadding`}> 
-
-//             <div className={styles.headline}>Projects<span className={styles.numberOfProjects}>(3)</span></div>
-            
-//             <div className={styles.wrapper}>
-
-//                 <a href="#" className={styles.wrapperContent}>
-//                     <div className={styles.content}>
-
-//                         <img className={styles.wrapperImg} src={image} alt="" />
-                        
-//                         {/* headline / name this project */}
-//                         <div className={styles.nameProject}> Stepup Academy</div>
-//                         <br />
-//                         {/* what tools did i use */}
-//                         <div style={{display:"flex", gap:"10px", color:"#000"}}>
-//                             <div className={styles.toolsProject}> React</div>
-//                             <div className={styles.toolsProject}> TypeScript</div>
-//                             <div className={styles.toolsProject}> Tailwind CSS</div>
-//                         </div>
-//                     </div>
-//                 </a>
-
-//                 <a href="#" className={styles.wrapperContent}>
-//                     <div className={styles.content}>
-
-//                         <img className={styles.wrapperImg} src={image} alt="" />
-                        
-//                         {/* headline / name this project */}
-//                         <div className={styles.nameProject}> Stepup Academy</div>
-//                         <br />
-//                         {/* what tools did i use */}
-//                         <div style={{display:"flex", gap:"10px", color:"#000"}}>
-//                             <div className={styles.toolsProject}> React</div>
-//                             <div className={styles.toolsProject}> TypeScript</div>
-//                             <div className={styles.toolsProject}> Tailwind CSS</div>
-//                         </div>
-//                     </div>
-//                 </a>
-//             </div>
-
-//         </div>
-//     )
-// }
-
-
 import styles from "./Work.module.css";
 import "../../../App.css";
-import image from "../../../../assets/blob-scene-haikei-removebg-preview.png";
+import image from "../../../../assets/Screenshot (25).png";
+import screenShot from "../../../../assets/Screenshot (24).png";
+import screenShotTwo from "../../../../assets/Screenshot (27).png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+
+const container = {
+  hidden: {},
+    show: { transition: { staggerChildren: 0.2 } },
+};
+
+const item = {
+    hidden: { opacity: 0, y: 30 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+} as const;
+
 
 export function Work() {
   const sectionRef = useRef(null);
@@ -64,21 +24,24 @@ export function Work() {
   const projects = [
     {
       id: 1,
+      href: "https://www.stepup-academy.org/",
       title: "Stepup Academy",
       tools: ["React", "TypeScript", "Tailwind CSS"],
       image: image
     },
     {
       id: 2,
-      title: "Chat App",
-      tools: ["React", "Node.js", "Socket.io"],
-      image: image
+      href: "https://e-commerce-2020.netlify.app/",
+      title: "E-commerce",
+      tools: ["HTML", "css", "JavaScript"],
+      image: screenShot
     },
     {
       id: 3,
-      title: "E-commerce",
-      tools: ["React", "Redux", "Stripe"],
-      image: image
+      href: "https://cloning-emirates-airline-website.netlify.app/",
+      title: "cloning emirates airline",
+      tools: ["HTML", "CSS", "JavaScript"],
+      image: screenShotTwo
     }
   ]
 
@@ -90,9 +53,20 @@ export function Work() {
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-60%"]);
 
   return (
-    <section ref={sectionRef} className={styles.fakeScrollSection}>
-      <div className={styles.stickyContainer}>
-        <div className={`${styles.background} sectionPadding`}>
+    <section id="Work" ref={sectionRef} className={styles.fakeScrollSection}>
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.1 }}
+        className={styles.stickyContainer}
+       >
+        <motion.div
+        variants={item}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.1 }}
+        className={`${styles.background} sectionPadding`}>
           <div className={styles.headline}>
             Projects
             <span className={styles.numberOfProjects}>({projects.length})</span>
@@ -104,7 +78,7 @@ export function Work() {
               style={{ x }}
             >
               {projects.map((item) => (
-                <a key={item.id} href="#" className={styles.wrapperContent}>
+                <a key={item.id} href={item.href} target="_blank" rel="noopener noreferrer" className={styles.wrapperContent}>
                   <div className={styles.content}>
                     <img className={styles.wrapperImg} src={item.image} alt="" />
                     <div className={styles.nameProject}>
@@ -121,8 +95,8 @@ export function Work() {
               ))}
             </motion.div>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

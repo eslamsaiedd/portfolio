@@ -2,21 +2,28 @@
 .wrapper {
   display: flex;
   position: relative;
-  min-height: 200vh;
+  color: white;
+  background-color: #000;
+  border-radius: 0 0 30px 30px;
+  overflow: hidden;
+  z-index: 11;
+  padding: 40px 20px;
 }
 
-/* النص */
+.sectionTitle {
+  font-size: 48px;
+  font-weight: 700;
+}
+
 .textSide {
   width: 70%;
 }
 
-/* جزء الموتسيكل */
 .animationSide {
   width: 30%;
   position: relative;
 }
 
-/* نخليه ثابت في نص الشاشة */
 .animationSide > section {
   position: sticky;
   top: 10%;

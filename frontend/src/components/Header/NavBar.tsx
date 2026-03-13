@@ -4,8 +4,24 @@ export function NavBar() {
 
     const [show, setShow] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
-    const arrayOfLi = ['Home', 'About', 'Work', 'Contact']
-
+    const arrayOfLi = [
+        {
+            id: 1,
+            name: 'Home',
+            href: '#Home'
+        },
+        {
+            id: 2,
+            name: 'Work',
+            href: '#Work'
+        },
+        {
+            id: 3,
+            name: 'About',
+            href: '#About'
+        }
+    ]
+    
     useEffect(() => {
         const handleScroll = () => {
         if (window.scrollY > lastScrollY && window.scrollY > 30) {
@@ -29,16 +45,17 @@ export function NavBar() {
     return (
         <div className={`${styles.navbar} ${show ? styles.visible : styles.hidden}`}>
             <div className={styles.logoLetters}>
-                E.S.
+                <a href="#Home">
+                    E.S.
+                </a>
             </div>
             <div>
-                <ul className={styles.fontOption}>
+                <ul>
                     {arrayOfLi.map((li) => {
                         return(
-                            <li key={li}><a href='#'>{li}</a></li>
+                            <li key={li.id}><a href={li.href}>{li.name}</a></li>
                         )
                     })}
-                    
                 </ul>
             </div>
         </div>

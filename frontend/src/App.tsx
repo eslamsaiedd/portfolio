@@ -1,21 +1,19 @@
 import HeroSection from "./components/sections/heroSection/Herosection"
-import './App.css'
 import { Work } from "./components/sections/work/Work";
 import { AboutMe } from "./components/sections/about/AboutMe";
+import Footer from "./components/sections//footer/Footer";
+import Cursor from "./Cursor";
+import './App.css'
 
 function App() {
 
-  
   return (
-    <div className={`container mainBackgroundColor`}>
+    <div className={`container`}>
+      <Cursor/>
       <HeroSection/>
       <Work/>
       <AboutMe/>
-
-      {/* work */}
-      {/* about */}
-      {/* contact */}
-      {/* footer */}
+      <Footer/>
     </div>
   )
 }
