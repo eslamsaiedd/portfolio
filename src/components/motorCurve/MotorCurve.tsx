@@ -58,7 +58,11 @@ export default function MotorCurve() {
             offsetDistance: distance,
           }}
         >
-          <img src={motorImg} className="motorAnimation" style={{x: useTransform(scrollYProgress, [0,1], ["0px","30px"]) }}/>
+          <motion.img
+            src={motorImg}
+            className="motorAnimation"
+            style={{ x: useTransform(scrollYProgress, [0, 1], ["0px", "30px"]) }}
+          />
           <img src={fire} className="backFire" />
         </motion.div>
 

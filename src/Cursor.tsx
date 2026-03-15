@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import "./cursor.css";
 
 export default function Cursor() {
-  const cursorRef = useRef(null);
+  const cursorRef = useRef<HTMLDivElement | null>(null);
   const hoveringRef = useRef(false);
 
   useEffect(() => {
@@ -13,16 +13,18 @@ export default function Cursor() {
     let posX = 0;
     let posY = 0;
 
-    const moveMouse = (e) => {
+    const moveMouse = (e: MouseEvent) => {
       mouseX = e.clientX;
       mouseY = e.clientY;
 
       // Track hovering using ref (no re-renders)
-      const target = e.target;
-      hoveringRef.current = !!(target.closest("a") || target.closest("button"));
+      const target = e.target as Element | null;
+      hoveringRef.current = !!(target?.closest("a") || target?.closest("button"));
     };
 
     window.addEventListener("mousemove", moveMouse);
+
+    let animationFrameId: number;
 
     const animate = () => {
       posX += (mouseX - posX) * 0.09;
@@ -37,13 +39,14 @@ export default function Cursor() {
         cursorRef.current.style.transform = `translate(-50%, -50%) scale(${scale})`;
       }
 
-      requestAnimationFrame(animate);
+      animationFrameId = requestAnimationFrame(animate);
     };
 
     animate();
 
     return () => {
       window.removeEventListener("mousemove", moveMouse);
+      cancelAnimationFrame(animationFrameId);
     };
   }, []);
 

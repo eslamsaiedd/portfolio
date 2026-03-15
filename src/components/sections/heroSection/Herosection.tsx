@@ -10,10 +10,6 @@ const container = {
     show: { transition: { staggerChildren: 0.2 } },
 };
 
-const item = {
-    hidden: { opacity: 0, y: 30 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
-} as const;
 
 const scrollHide = {
   visible: {
