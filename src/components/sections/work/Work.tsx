@@ -66,7 +66,7 @@ export function Work() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.1 }}
-        className={`${styles.background} sectionPadding`}>
+        className={`${styles.background} `}>
           <div className={styles.headline}>
             Projects
             <span className={styles.numberOfProjects}>({projects.length})</span>

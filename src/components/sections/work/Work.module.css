@@ -1,8 +1,24 @@
 
- .background {
-  background-color: var(--background-color);
+
+.stickyContainer {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden; 
+  display: flex;
+  align-items: center;
+  border-radius: 30px ;
+  padding: 0px 20px;
+
+}
+
+.background {
+  background-color: #EFEFEF;
+  width: -webkit-fill-available;
   color: var(--text-color);
-  padding: 40px 20px;
+  padding: 20px 0px 20px 20px;
+  border-radius: 30px;
+  min-height: 300px;
 }
 
 .headline {
@@ -77,19 +93,11 @@
   position: relative;
 }
 
-.stickyContainer {
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  overflow: hidden; 
-  display: flex;
-  align-items: center;
-  border-radius: 30px 30px 0 0;
-}
 
 .horizontalWrapper {
   overflow: hidden;
   width: 100%;
+  min-height: 300px;
 }
 
 .cardsRow {
@@ -97,4 +105,12 @@
   gap: 30px;
   width: max-content;
   padding-left: calc(50vw - 250px - 60px); /* 50vw نص الشاشة - نصف عرض الكارت - 60px */
+}
+
+
+@media (max-width: 768px) {
+
+  .content {
+    width: 350px;
+  }
 }

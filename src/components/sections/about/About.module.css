@@ -4,7 +4,6 @@
   position: relative;
   color: white;
   background-color: #000;
-  border-radius: 0 0 30px 30px;
   overflow: hidden;
   z-index: 11;
   padding: 40px 20px;
@@ -27,4 +26,14 @@
 .animationSide > section {
   position: sticky;
   top: 10%;
+}
+
+@media (max-width: 768px) {
+  .animationSide {
+    display: none;
+  }
+
+  .textSide {
+    width: 100%;
+  }
 }

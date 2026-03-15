@@ -33,7 +33,6 @@ export function AboutMe() {
                     <h2 className={styles.sectionTitle}>Who is Eslam?</h2>
                     <p>My name is Eslam Saied born in 2006</p>
                     <p>I'm a passionate Front-End Developer who started learning programming as a hobby and quickly fell in love with building things on the web.
-                        {/* I'm a passionate Front-End Developer who started learning programming as a hobby and quickly fell in love with building things on the web. */}
                     </p>
                     <p>Currently studying and continuously improving my skills in modern web technologies.</p>
                     <p>I enjoy turning ideas into interactive and visually appealing web experiences.</p>
