@@ -2,13 +2,12 @@
 .wrapper {
   position: absolute;
   width: 200px;
-  /* height: 874px; */
   right: 0; 
   top: 0;
 }
 
 .motorAnimation {
-  width: 150px;
+  width: 120px;
   transform: scaleY(-1);
 }
 
@@ -22,8 +21,8 @@
 
 .motorWrapper {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 40px;
+  left: 5px;
   offset-path: path("M345.25 0.999268C294.798 20.0112 308.241 28.3893 160.465 28.3893C12.6887 28.3893 1.24999 108.561 1.24999 156.188V873.999");
   offset-rotate: auto;
 }

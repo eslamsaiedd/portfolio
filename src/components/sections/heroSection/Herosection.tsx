@@ -4,6 +4,7 @@ import Motor from "../../motorAnimation/Motor";
 import styles from './HeroSection.module.css'
 import { useEffect, useState } from "react";
 import peaks from "../../../../assets/layered-peaks-haikei.svg";
+import { TypeAnimation } from "react-type-animation";
 
 const container = {
   hidden: {},
@@ -63,7 +64,19 @@ export default function HeroSection() {
             
             <div style={{display:"flex", flexDirection:"column"}}>
               <span><span className={styles.inlineSpan}> I'm</span> Eslam</span>
-              <span><span className={styles.inlineSpan}>I'm a</span> FE Developer</span>
+              <span style={{zIndex:"111"}}>
+                <span className={styles.inlineSpan}>I'm a </span>
+                <TypeAnimation
+                  sequence={[
+                    " Frontend Developer", 2000,
+                    " React Developer", 2000,
+                    " UI Enthusiast", 2000,
+                  ]}
+                  speed={20}
+                  repeat={Infinity}
+                />
+              </span>
+
             </div>
             <div className={styles.subTitle}>
               Frontend React expert 

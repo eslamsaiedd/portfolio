@@ -1,9 +1,9 @@
 
 import styles from "./Work.module.css";
 import "../../../App.css";
-import image from "../../../../assets/Screenshot (25).png";
-import screenShot from "../../../../assets/Screenshot (24).png";
-import screenShotTwo from "../../../../assets/Screenshot (27).png";
+import image from "../../../../assets/Screenshot (25)-B1GOzr0T.png";
+import ipTrackerImage from "../../../../assets/Sticker (1).png";
+import eCommerceSinglePage from "../../../../assets/single-page.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
@@ -31,17 +31,17 @@ export function Work() {
     },
     {
       id: 2,
-      href: "https://e-commerce-2020.netlify.app/",
-      title: "E-commerce",
-      tools: ["HTML", "css", "JavaScript"],
-      image: screenShot
+      href: "https://ipaddresstracker-ver1.netlify.app/",
+      title: "IP Address Tracker",
+      tools: ["React", "TypeScript", "Tailwind CSS"],
+      image:  ipTrackerImage
     },
     {
       id: 3,
-      href: "https://cloning-emirates-airline-website.netlify.app/",
-      title: "cloning emirates airline",
+      href: "https://single-page-sneakers-store.netlify.app/",
+      title: "E-commerce Website",
       tools: ["HTML", "CSS", "JavaScript"],
-      image: screenShotTwo
+      image: eCommerceSinglePage
     }
   ]
 
@@ -81,15 +81,19 @@ export function Work() {
                 <a key={item.id} href={item.href} target="_blank" rel="noopener noreferrer" className={styles.wrapperContent}>
                   <div className={styles.content}>
                     <img className={styles.wrapperImg} src={item.image} alt="" />
-                    <div className={styles.nameProject}>
-                      {item.title}
+                    
+                    <div className={styles.infoWrapper}>
+                      <div className={styles.nameProject}>
+                        {item.title}
+                      </div>
+
+                      <div className={styles.toolsWrapper}>
+                          {item.tools.map((tool, index) => (
+                            <div key={index} className={styles.toolsProject}>{tool}</div>
+                          ))}
+                      </div>
                     </div>
 
-                    <div className={styles.toolsWrapper}>
-                        {item.tools.map((tool, index) => (
-                          <div key={index} className={styles.toolsProject}>{tool}</div>
-                        ))}
-                    </div>
                   </div>
                 </a>
               ))}

@@ -48,3 +48,10 @@
   font-family: "Pastline Sans", Arial, sans-serif;
 }
 
+
+
+@media (max-width: 600px) {
+ .navLinks {
+    display: none;
+  }
+}

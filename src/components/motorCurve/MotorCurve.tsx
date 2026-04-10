@@ -2,8 +2,8 @@
 
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { useRef } from "react";
-import motorImg from "../../../assets/ChatGPT_Image_21_فبراير_2026__08_22_07_م-removebg-preview.png";
-import fire from "../../../assets/fire.gif";
+import motorImg from "../../../assets/ChatGPT_Image_21_فبراير_2026__08_22_07_م-removebg-preview-BTWcy2jD.png";
+import fire from "../../../assets/fire-BcpFnhCa.gif";
 import './MotorCurve.css';
 
 export default function MotorCurve() {
@@ -38,7 +38,7 @@ export default function MotorCurve() {
           style={{
             position: "absolute",
             right: -150,
-            top: 0,
+            top: 40,
             width: 300,
             height: 800,
           }}
@@ -61,7 +61,7 @@ export default function MotorCurve() {
           <motion.img
             src={motorImg}
             className="motorAnimation"
-            style={{ x: useTransform(scrollYProgress, [0, 1], ["0px", "30px"]) }}
+            style={{ x: useTransform(scrollYProgress, [0, 1], ["0px", "30px"]),scaleY: -1 }}
           />
           <img src={fire} className="backFire" />
         </motion.div>

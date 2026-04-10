@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from "react";
-import motorImage from "../../../assets/ChatGPT_Image_21_فبراير_2026__08_22_07_م-removebg-preview.png";
-import fire from "../../../assets/fire.gif";
+import motorImage from "../../../assets/ChatGPT_Image_21_فبراير_2026__08_22_07_م-removebg-preview-BTWcy2jD.png";
+import fire from "../../../assets/fire-BcpFnhCa.gif";
 import "./Motor.css";
 
 export default function Motor() {
@@ -10,7 +10,7 @@ export default function Motor() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setStart(true);
-    }, 1500); 
+    }, 2500); 
 
     return () => clearTimeout(timer);
   }, []);

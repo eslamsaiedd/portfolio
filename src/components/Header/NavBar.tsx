@@ -49,7 +49,7 @@ export function NavBar() {
                     E.S.
                 </a>
             </div>
-            <div>
+            <div className={styles.navLinks}>
                 <ul>
                     {arrayOfLi.map((li) => {
                         return(
