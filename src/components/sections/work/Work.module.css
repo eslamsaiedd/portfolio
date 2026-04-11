@@ -116,9 +116,48 @@
 }
 
 
+
 @media (max-width: 768px) {
 
-  .content {
-    width: 350px;
+  .cardsRow {
+    padding-left: calc(50vw - 36vw - 10px);
+    gap: 20px;
+    will-change: transform;        /* ← GPU layer for smooth animation */
+    -webkit-backface-visibility: hidden; /* ← fixes jank on Safari/iOS */
+    backface-visibility: hidden;
   }
+
+  .fakeScrollSection {
+    height: 400vh; /* slightly shorter than 500vh since cards are smaller */
+  }
+
+  .stickyContainer {
+    padding: 0 10px;
+  }
+
+  .background {
+    padding: 16px 0 16px 14px;
+    border-radius: 20px;
+  }
+
+  .headline {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .content {
+    width: 72vw;       /* fills most of screen, showing edge of next card */
+    max-width: 300px;
+    height: auto;
+    min-height: 300px;
+  }
+
+  .wrapperImg {
+    height: 200px;
+  }
+
+  .nameProject {
+    font-size: 18px;
+  }
+
 }
