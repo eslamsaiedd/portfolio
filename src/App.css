@@ -1,8 +1,9 @@
 :root {
-  --primary-color: #bb4c4c;
   --secondary-color: #0B2447; 
   --background-color: #ffffff;
   --text-color: #000000;
+  --font-display: 'Clash Display', sans-serif;
+  --font-body: 'Inter', sans-serif;
 }
 
 html, body {
@@ -10,7 +11,12 @@ html, body {
   padding: 0;
   scroll-behavior: smooth;
   overflow-x: clip;
-  font-family:"Pastline Sans", Arial, sans-serif;
+  /* font-family:"Pastline Sans", Arial, sans-serif; */
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, .sectionTitle, .statValue, .bgText {
+  font-family: var(--font-display);
 }
 
 .container {

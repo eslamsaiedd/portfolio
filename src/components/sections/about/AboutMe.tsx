@@ -13,7 +13,7 @@ const item = {
   show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
 } as const;
 
-const skills = ["React", "TypeScript", "Framer Motion", "Three.js", "CSS Modules", "Vite"];
+const skills = ["React", "Next.js", "TypeScript", "Framer Motion", "CSS Animations", "UI/UX"];
 
 const stats = [
   { value: "1+", label: "Years experience" },
@@ -35,16 +35,17 @@ export function AboutMe() {
         {/* Left — text + stats + cards */}
         <motion.div variants={item} className={styles.textSide}>
             {/* <div></div> */}
-          <p className={styles.eyebrow}>About me</p>
+          <p className={styles.eyebrow}>Who I am</p>
           <h2 className={styles.sectionTitle}>
             I build things <br />
             <span className={styles.accent}>people love</span> to use.
           </h2>
           <p className={styles.bio}>
-            Frontend React developer focused on fast, growth-driven UX. I turn
-            ideas into polished, performant interfaces.
+            Frontend developer & UI/UX enthusiast who crafts interfaces that feel
+            as good as they look. I obsess over motion, detail, and the space
+            between pixels.
           </p>
-          <p className={styles.bio}>Always learning. Always building.</p>
+          <p className={styles.bio}>  From wireframe to deployment — I make it move, breathe, and convert.</p>
 
           <div className={styles.skills}>
             {skills.map((s) => (

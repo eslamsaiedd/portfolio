@@ -37,15 +37,15 @@
   font-size: 17px;
   font-weight: 500;
   color: var(--background-color);
-  font-family: Plusjakartasans, sans-serif;
+  /* font-family: Plusjakartasans, sans-serif; */
 }
 
 
-.logoLetters a {  
+.logoLetters {  
   font-size: 33px;
   font-weight: bolder;
-  letter-spacing: -0.72px;
-  font-family: "Pastline Sans", Arial, sans-serif;
+  letter-spacing: 2px;
+  font-family: var(--font-display);
 }
 
 

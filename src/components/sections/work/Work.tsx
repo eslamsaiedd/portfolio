@@ -179,6 +179,8 @@ export function Work() {
           viewport={{ once: true, amount: 0.1 }}
           className={styles.background}
         >
+          <div className={styles.bgText} aria-hidden="true">PROJECTS</div>
+
           <div className={styles.headline}>
             Projects
             <span className={styles.numberOfProjects}>({projects.length})</span>

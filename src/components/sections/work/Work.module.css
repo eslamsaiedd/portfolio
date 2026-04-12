@@ -12,6 +12,15 @@
 
 }
 
+/* .background {
+  background-color: #EFEFEF;
+  width: -webkit-fill-available;
+  color: var(--text-color);
+  padding: 20px 0px 20px 20px;
+  border-radius: 30px;
+  min-height: 300px;
+} */
+
 .background {
   background-color: #EFEFEF;
   width: -webkit-fill-available;
@@ -19,13 +28,32 @@
   padding: 20px 0px 20px 20px;
   border-radius: 30px;
   min-height: 300px;
+  position: relative;   /* ← needed for bgText positioning */
+  overflow: hidden;     /* ← keeps text from bleeding out */
+}
+
+.bgText {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: clamp(80px, 18vw, 200px);
+  font-weight: 700;
+  font-family: var(--font-display);
+  color: rgba(0, 0, 0, 0.04);   /* dark tint since background is light #EFEFEF */
+  letter-spacing: -4px;
+  white-space: nowrap;
+  user-select: none;
+  pointer-events: none;
+  z-index: 0;
+  line-height: 1;
 }
 
 .headline {
   font-size: 56px;
   font-weight: bold;
   margin-bottom: 30px;
-  font-family: "Geist", "Geist Placeholder", sans-serif;
+  font-family: var(--font-display);
   display: flex;
 }
 
@@ -68,15 +96,11 @@
   transition: all 0.3s ease-in-out;
 }
 
-.infoWrapper {
-
-}
-
 .nameProject {
   font-size: 24px;
   font-weight: 500;
   margin-top: 10px;
-  font-family: "Geist", "Geist Placeholder", sans-serif;
+  font-family: var(--font-display);
 }
 
 .toolsWrapper {
@@ -91,7 +115,7 @@
   background-color: var(--background-color);
   padding: 4px 8px;
   border-radius: 8px;
-  font-family: "Geist", "Geist Placeholder", sans-serif;
+  font-family: var(--font-body);
   color: var(--text-color);
 }
 

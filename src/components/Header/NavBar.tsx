@@ -45,9 +45,7 @@ export function NavBar() {
     return (
         <div className={`${styles.navbar} ${show ? styles.visible : styles.hidden}`}>
             <div className={styles.logoLetters}>
-                <a href="#Home">
-                    E.S.
-                </a>
+                E.S.
             </div>
             <div className={styles.navLinks}>
                 <ul>

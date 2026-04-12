@@ -1,9 +1,10 @@
+/* 
 .hookText {
   width: 100%;
-  font-family:"Pastline Sans", Arial, sans-serif;
+  font-family:var(--font-display);
   font-size: 56px;
   font-weight: bolder;
-  letter-spacing: -3px;
+  letter-spacing: -1px;
 }
 
 .paddingGlobal {
@@ -56,12 +57,11 @@
   padding: 10px 20px;
   font-size: 18px;
   font-weight: 500;
-  font-family: Plusjakartasans, sans-serif;
+  font-family:var(--font-body);
   background-color: var(--background-color);
   border: 1px solid transparent;
   border-radius: 10px;
   cursor: pointer;
-  width: 170px;
   z-index: 100;
   a {
     color: var(--text-color);
@@ -77,7 +77,7 @@
   padding: 10px 20px;
   font-size: 18px;
   font-weight: 500;
-  font-family: Plusjakartasans, sans-serif;
+  font-family: var(--font-body);
   background-color: transparent;
   border: 1px solid var(--background-color);
   border-radius: 10px;
@@ -92,7 +92,6 @@
   }
 }
 
-/* responsive adjustments */
 @media (max-width: 1024px) {
   .paddingGlobal {
     padding: 120px 40px 80px;
@@ -109,15 +108,211 @@
 }
 
 @media (max-width: 768px) {
- 
   .paddingGlobal {
-    padding: 100px 20px 60px;
+    padding: 100px 24px 40px;
+    gap: 16px;
+  }
+
+  .hookText {
+    font-size: 52px;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+  }
+
+  .subTitle {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .actionBtnWrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .contactButton,
+  .projectsButton {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  .wave {
+    display: none;
+  }
+
+}
+
+@media (max-width: 400px) {
+  .hookText {
+    font-size: 42px;
+  }
+} */
+
+
+.hookText {
+  width: 100%;
+  font-family: var(--font-display);
+  font-size: 56px;
+  font-weight: bolder;
+}
+
+.paddingGlobal {
+  width: 100%;
+  padding: 90px 0px 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ── Watermark ── */
+.bgText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(80px, 18vw, 220px);
+  font-weight: 700;
+  font-family: var(--font-display);
+  color: rgba(255, 255, 255, 0.03);
+  letter-spacing: -4px;
+  white-space: nowrap;
+  user-select: none;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.eyebrow {
+  font-size: 12px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 500;
+  font-family: var(--font-body);
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.headlineBlock {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.inlineSpan {
+  display: inline-block;
+  color: gray;
+}
+
+.subTitle {
+  color: #a6a6a6;
+  font-size: 18px;
+  letter-spacing: normal;
+  font-weight: 500;
+  font-family: var(--font-body);
+  position: relative;
+  z-index: 1;
+}
+
+.availableTag {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-family: var(--font-body);
+  color: #666;
+  position: relative;
+  z-index: 1;
+}
+
+.availableDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #4ade80;
+  display: inline-block;
+  margin-right: 6px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+.wave {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.actionBtnWrapper {
+  display: flex;
+  gap: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.contactButton {
+  width: fit-content;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: var(--font-body);
+  background-color: var(--background-color);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 100;
+  a {
+    color: var(--text-color);
+    text-decoration: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+}
+
+.projectsButton {
+  width: fit-content;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: var(--font-body);
+  background-color: transparent;
+  border: 1px solid var(--background-color);
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 100;
+  a {
+    color: var(--background-color);
+    text-decoration: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .paddingGlobal {
+    padding: 120px 0px 80px;
+  }
+  .hookText {
+    font-size: 48px;
+  }
+  .subTitle {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .paddingGlobal {
+    padding: 100px 0px 60px;
   }
   .hookText {
     font-size: 36px;
-  }
-  .secondLineTextHook {
-    font-size: 60px;
   }
   .subTitle {
     font-size: 14px;
@@ -129,7 +324,14 @@
   .wave {
     display: none;
   }
-  .contactButton a {
+  .contactButton a,
+  .projectsButton a {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .hookText {
+    font-size: 30px;
   }
 }

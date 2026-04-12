@@ -1,4 +1,3 @@
-
 .wrapper {
   position: relative;
   background-color: var(--text-color);
@@ -6,7 +5,6 @@
   min-height: 100%;
   overflow: hidden;
   padding-top: 40px;
-  /* padding-bottom: 40px; */
 }
 
 .bgText {
@@ -44,7 +42,7 @@
 
 .eyebrow {
   font-size: 12px;
-  color: var(--primary-color);
+  color: #999;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: 500;
@@ -61,7 +59,7 @@
 }
 
 .accent {
-  color: var(--primary-color);
+  color: #ffffff;
 }
 
 .bio {
@@ -78,9 +76,9 @@
 }
 
 .skillTag {
-  background: rgba(187, 76, 76, 0.12);
-  color: var(--primary-color);
-  border: 1px solid rgba(187, 76, 76, 0.25);
+  background: rgba(255, 255, 255, 0.06);
+  color: #ccc;
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 20px;
   font-size: 12px;
   font-weight: 500;
@@ -106,7 +104,7 @@
 .statValue {
   font-size: 32px;
   font-weight: 700;
-  color: var(--primary-color);
+  color: #ffffff;
   line-height: 1;
   letter-spacing: -1px;
 }
@@ -135,12 +133,12 @@
 .infoIcon {
   width: 36px;
   height: 36px;
-  background: rgba(187, 76, 76, 0.15);
+  background: rgba(255, 255, 255, 0.08);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--primary-color);
+  color: #ccc;
   flex-shrink: 0;
 }
 
@@ -188,12 +186,15 @@
   }
 
   .sectionTitle {
+    letter-spacing: 0;
     font-size: 28px;
   }
+
   .animationSide {
     display: none;
   }
-   .grid {
+
+  .grid {
     grid-template-columns: 1fr;
   }
 }
