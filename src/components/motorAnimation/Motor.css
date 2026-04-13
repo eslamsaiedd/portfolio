@@ -59,3 +59,17 @@
     display: none;
   }
 }
+
+
+@media (max-width: 768px) {
+
+  .motor {
+    width: 100px;
+  }
+
+  .backfire {
+    top: 85px;
+    right: 58px;
+    width: 55px;
+  }
+}
