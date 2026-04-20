@@ -23,8 +23,8 @@
   font-size: clamp(80px, 18vw, 220px);
   font-weight: 700;
   font-family: var(--font-display);
-  color: rgba(255, 255, 255, 0.128);
-  letter-spacing: -4px;
+  color: rgba(255, 255, 255, 0.055);
+  letter-spacing: -2px;
   white-space: nowrap;
   user-select: none;
   pointer-events: none;

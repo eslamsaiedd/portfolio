@@ -15,6 +15,8 @@
   left: -100px; 
   width: 120px;
   will-change: transform;
+  z-index: 1111111111111111111111111111111;
+
 }
 
 .animate {

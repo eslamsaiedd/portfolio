@@ -14,8 +14,8 @@
   transform: translate(-50%, -50%);
   font-size: clamp(80px, 18vw, 200px);
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.03);
-  letter-spacing: -4px;
+  color: rgba(255, 255, 255, 0.055);
+  letter-spacing: -2px;
   white-space: nowrap;
   user-select: none;
   pointer-events: none;
